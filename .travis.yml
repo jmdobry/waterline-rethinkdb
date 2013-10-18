@@ -1,8 +1,14 @@
 language: node_js
 node_js:
-  - "0.11"
   - "0.10"
   - "0.8"
+before_install:
+  - sudo add-apt-repository ppa:rethinkdb/ppa -y
+  - sudo apt-get update -qq
+  - sudo apt-get install rethinkdb -y
 before_script:
-  - brew install rethinkdb
-  - rethinkdb
+  - rethinkdb --daemon
+  - node test/setup.js
+script: "npm run-script test_travis"
+after_script:
+  - killall rethinkdb

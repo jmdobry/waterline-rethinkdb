@@ -1,3 +1,4 @@
+'use strict';
 describe('registerCollection', function () {
 
 	it('should not hang or encounter any errors', function (cb) {
