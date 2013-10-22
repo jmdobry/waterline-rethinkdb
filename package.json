@@ -1,11 +1,11 @@
 {
-  "name": "sails-rethinkdb",
+  "name": "waterline-rethinkdb",
   "description": "A Waterline adapter for RethinkDB. May be used in a Sails app or anything using Waterline for the ORM.",
   "version": "0.0.1",
   "homepage": "https://github.com/jmdobry/rethinkdb",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jmdobry/sails-rethinkdb.git"
+    "url": "https://github.com/jmdobry/waterline-rethinkdb.git"
   },
   "author": {
     "name": "Jason Dobry",
@@ -32,7 +32,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/jmdobry/sails-rethinkdb/blob/master/LICENSE.md"
+      "url": "https://github.com/jmdobry/waterline-rethinkdb/blob/master/LICENSE.md"
     }
   ],
   "readmeFilename": "README.md",
