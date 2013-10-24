@@ -9,3 +9,4 @@ ssl
 nbproject
 npm-debug.log
 libpeerconnection.log
+rethinkdb_data

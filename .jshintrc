@@ -25,6 +25,8 @@
         "describe",
         "it",
         "xit",
+	    "before",
+	    "after",
         "beforeEach",
         "afterEach",
         "expect",
