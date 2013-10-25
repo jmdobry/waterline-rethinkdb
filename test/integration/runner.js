@@ -16,6 +16,13 @@ RethinkDBAdapter.setConfig({
 	db: 'test',
 	host: '127.0.0.1',
 	port: 28015
+}, function (err, config) {
+	if (err) {
+		throw new Error(err);
+	} else {
+		console.log('Config set to:');
+		console.log(config);
+	}
 });
 
 var config = {
