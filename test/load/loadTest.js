@@ -7,6 +7,11 @@ var RethinkDBAdapter = require('../../lib/adapter'),
 
 var INSERTS = 30000;
 
+RethinkDBAdapter.setConfig({
+	poolMax: 500,
+	poolReapIntervalMillis: 10000
+});
+
 describe('Load Testing', function () {
 	// test should finish in under 1 minute
 	this.timeout(60000);
