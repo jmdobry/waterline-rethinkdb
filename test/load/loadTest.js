@@ -5,10 +5,10 @@ var RethinkDBAdapter = require('../../lib/adapter'),
 	assert = require('assert'),
 	async = require('async');
 
-var INSERTS = 30000;
+var INSERTS = 5000;
 
 RethinkDBAdapter.setConfig({
-	poolMax: 500,
+	poolMax: 300,
 	poolReapIntervalMillis: 10000
 });
 
