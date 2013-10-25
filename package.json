@@ -17,8 +17,7 @@
 		"lib": "./lib"
 	},
 	"scripts": {
-		"test": "node node_modules/grunt-cli/bin/grunt test",
-		"test_travis": "node node_modules/grunt-cli/bin/grunt travis"
+		"test": "node node_modules/grunt-cli/bin/grunt test"
 	},
 	"keywords": [
 		"orm",

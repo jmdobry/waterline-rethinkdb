@@ -7,8 +7,10 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install rethinkdb -y
 before_script:
-  - rethinkdb --daemon
-  - which node
-script: "npm run-script test_travis"
+  - sudo rethinkdb --daemon
+  - sleep 10
+script:
+  - node test/integration/runner.js
+  - node node_modules/mocha/bin/mocha test/load/loadTest.js --check-leaks --reporter dot
 after_script:
   - killall rethinkdb

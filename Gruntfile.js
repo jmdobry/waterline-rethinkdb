@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 						}
 					}
 				},
-				command: 'which node && node test/integration/runner.js'
+				command: 'node test/integration/runner.js'
 			},
 			load: {
 				options: {
@@ -47,18 +47,11 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.registerTask('build', [
-		'jshint'
-	]);
-
-	grunt.registerTask('default', [
-		'build'
-	]);
-
-	grunt.registerTask('test', ['build', 'test-integration', 'test-load']);
+	grunt.registerTask('build', ['jshint']);
 
 	grunt.registerTask('test-integration', ['shell:integration']);
 	grunt.registerTask('test-load', ['shell:load']);
+	grunt.registerTask('test', ['build', 'test-integration', 'test-load']);
 
-	grunt.registerTask('travis', ['build', 'test-integration', 'test-load']);
+	grunt.registerTask('default', ['build']);
 };
