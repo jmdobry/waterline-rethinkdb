@@ -8,7 +8,7 @@ before_install:
   - sudo apt-get install rethinkdb -y
 before_script:
   - rethinkdb --daemon
-  - node test/setup.js
+  - which node
 script: "npm run-script test_travis"
 after_script:
   - killall rethinkdb

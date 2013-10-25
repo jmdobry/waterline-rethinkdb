@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 						}
 					}
 				},
-				command: 'node test/integration/runner.js'
+				command: 'which node && node test/integration/runner.js'
 			},
 			load: {
 				options: {
