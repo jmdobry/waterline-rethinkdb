@@ -5,7 +5,7 @@ var RethinkDBAdapter = require('../../lib/adapter'),
 	assert = require('assert'),
 	async = require('async');
 
-var CONNECTIONS = 300;
+var INSERTS = 30000;
 
 describe('Load Testing', function () {
 	// test should finish in under 1 minute
@@ -43,10 +43,9 @@ describe('Load Testing', function () {
 	});
 
 	describe('create with x connection', function () {
-
 		it('should not error', function (done) {
 			// generate x users
-			async.times(CONNECTIONS, function (n, next) {
+			async.times(INSERTS, function (n, next) {
 				var data = {
 					first_name: Math.floor((Math.random() * 100000) + 1),
 					last_name: Math.floor((Math.random() * 100000) + 1),
@@ -55,10 +54,9 @@ describe('Load Testing', function () {
 				RethinkDBAdapter.create('test', data, next);
 			}, function (err, users) {
 				assert(!err);
-				assert(users.length === CONNECTIONS);
+				assert(users.length === INSERTS);
 				done();
 			});
 		});
 	});
-
 });
