@@ -17,7 +17,7 @@ RethinkDBAdapter.setConfig({
 
 describe('Load Testing', function () {
 	// test should finish in under 1 minute
-	this.timeout(60000);
+	this.timeout(120000);
 
 	before(function (done) {
 		var Schema;
