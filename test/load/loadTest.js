@@ -10,9 +10,9 @@ var INSERTS = 5000,
 	BATCH_INSERTS = 1000,
 	testCollection;
 
-RethinkDBAdapter.setConfig({
-	poolMax: 300,
-	poolReapIntervalMillis: 10000
+var adapter = new RethinkDBAdapter({
+	max: 300,
+	reapIntervalMillis: 10000
 });
 
 describe('Load Testing', function () {
@@ -22,7 +22,7 @@ describe('Load Testing', function () {
 	before(function (done) {
 		var Schema;
 
-		RethinkDBAdapter.drop('test', function (err) {
+		adapter.drop('test', function (err) {
 			if (err) {
 				console.error(err);
 				return done(err);
@@ -43,7 +43,7 @@ describe('Load Testing', function () {
 
 				var test = new Test({
 					adapters: {
-						rethinkdb: RethinkDBAdapter
+						rethinkdb: adapter
 					}
 				}, function (err, collection) {
 					if (err) {
@@ -66,7 +66,7 @@ describe('Load Testing', function () {
 					last_name: Math.floor((Math.random() * 100000) + 1),
 					email: Math.floor((Math.random() * 100000) + 1)
 				};
-				RethinkDBAdapter.create('test', data, next);
+				adapter.create('test', data, next);
 			}, function (err, users) {
 				assert(!err);
 				assert(users.length === INSERTS);

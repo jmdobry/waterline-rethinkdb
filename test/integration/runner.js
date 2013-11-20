@@ -12,17 +12,10 @@ var tests = require('../../node_modules/waterline-adapter-tests'),
 /**
  * Build a RethinkDB Config File
  */
-RethinkDBAdapter.setConfig({
+var adapter = new RethinkDBAdapter({
 	db: 'test',
 	host: '127.0.0.1',
 	port: 28015
-}, function (err, config) {
-	if (err) {
-		throw new Error(err);
-	} else {
-		console.log('Config set to:');
-		console.log(config);
-	}
 });
 
 var config = {
@@ -35,7 +28,7 @@ var config = {
  * Run Tests
  */
 new tests({
-	adapter: RethinkDBAdapter,
+	adapter: adapter,
 	config: config,
 	failOnError: true
 });

@@ -3,15 +3,17 @@
  * Wipe Database before tests are run and
  * after tests are run to ensure a clean test environment.
  */
-var Adapter = require('../../../lib/adapter'),
+var RethinkDBAdapter = require('../../../lib/adapter'),
 	config = require('./config');
 
+var adapter = new RethinkDBAdapter();
+
 function dropTable(cb) {
-	Adapter.registerCollection({ identity: 'test', config: config }, function (err) {
+	adapter.registerCollection({ identity: 'test', config: config }, function (err) {
 		if (err) {
 			cb(err);
 		}
-		Adapter.drop('test', cb);
+		adapter.drop('test', cb);
 	});
 }
 
