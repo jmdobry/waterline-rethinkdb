@@ -2,6 +2,8 @@
 
 # RethinkDBAdapter
 
+[![Build Status](https://travis-ci.org/jmdobry/waterline-rethinkdb.png?branch=master)](https://travis-ci.org/jmdobry/waterline-rethinkdb) [![Code Climate](https://codeclimate.com/github/jmdobry/waterline-rethinkdb.png)](https://codeclimate.com/github/jmdobry/waterline-rethinkdb) [![Dependency Status](https://gemnasium.com/jmdobry/waterline-rethinkdb.png)](https://gemnasium.com/jmdobry/waterline-rethinkdb)
+
 A [Waterline](https://github.com/balderdashy/waterline) adapter for [RethinkDB](http://rethinkdb.com/). May be used in a [Sails](https://github.com/balderdashy/sails) app or anything using Waterline for the ORM.
 
 ## Getting started
