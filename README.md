@@ -5,7 +5,7 @@
 
 __A RethinkDB adapter for the [Waterline ORM](https://github.com/balderdashy/waterline). Works in a [Sails.js](https://github.com/balderdashy/sails) app or anything using Waterline for the ORM.__
 
-__Version:__ 0.4.0
+__Version:__ 0.4.1
 
 This is pre-1.0.0 alpha software! Many RethinkDB/Waterline features/operations are not supported yet.
 
