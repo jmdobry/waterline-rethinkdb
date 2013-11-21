@@ -1,33 +1,49 @@
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png) 
 
-# RethinkDBAdapter
-
+## RethinkDBAdapter
 [![Build Status](https://travis-ci.org/jmdobry/waterline-rethinkdb.png?branch=master)](https://travis-ci.org/jmdobry/waterline-rethinkdb) [![Code Climate](https://codeclimate.com/github/jmdobry/waterline-rethinkdb.png)](https://codeclimate.com/github/jmdobry/waterline-rethinkdb) [![Dependency Status](https://gemnasium.com/jmdobry/waterline-rethinkdb.png)](https://gemnasium.com/jmdobry/waterline-rethinkdb)
 
-A [Waterline](https://github.com/balderdashy/waterline) adapter for [RethinkDB](http://rethinkdb.com/). May be used in a [Sails](https://github.com/balderdashy/sails) app or anything using Waterline for the ORM.
+__A RethinkDB adapter for the [Waterline ORM](https://github.com/balderdashy/waterline). Works in a [Sails.js](https://github.com/balderdashy/sails) app or anything using Waterline for the ORM.__
 
-## Getting started
-It's usually pretty easy to add your own adapters for integrating with proprietary systems or existing open APIs.  For most things, it's as easy as `require('some-module')` and mapping the appropriate methods to match waterline semantics.  To get started:
+__Version:__ 0.4.0
 
-1. Fork this repository
-2. Set up your README and package.json file.  Sails.js adapter module names are of the form sails-*, where * is the name of the datastore or service you're integrating with.
-3. Build your adapter.
+This is pre-1.0.0 alpha software! Many RethinkDB/Waterline features/operations are not supported yet.
 
-## How to test your adapter
-1. Run `npm link` in this adapter's directory
-2. Clone the sails.js core and modify the tests to use your new adapter.
-3. Run `npm link sails-boilerplate`
-4. From the sails.js core directory, run `npm test`.
+Supported operations:
 
-## Submitting your adapter
-1. Do a pull request to this repository (make sure you attribute yourself as the author set the license in the package.json to "MIT")  Please let us know about any special instructions for usage/testing.
-2. We'll run the tests one last time.  If there are any issues, we'll let you know.
-3. When it's ready, we'll update the documentation with information about your new adapter
-4. Then we'll tweet and post about it on our blog, adoring you with lavish praises.
-5. Mike will send you jelly beans.
+- registerCollection
+- teardown
+- define
+- drop
+- describe
+- find
+- create
+- createEach
+- update
+- delete
+- count
+- run
 
+Waterline criteria options (lessThan, greaterThan, etc.) don't work yet.
 
-## About Sails.js and Waterline
-http://SailsJs.com
+## License
+[MIT License](https://github.com/jmdobry/angular-cache/blob/master/LICENSE)
 
-Waterline is a new kind of storage and retrieval engine for Sails.js.  It provides a uniform API for accessing stuff from different kinds of databases, protocols, and 3rd party APIs.  That means you write the same code to get users, whether they live in mySQL, LDAP, MongoDB, or Facebook.
+Copyright (C) 2013 Jason Dobry
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
