@@ -19,6 +19,7 @@
     "strict": true,
     "trailing": true,
     "smarttabs": true,
+	"loopfunc": true,
     "predef": [
         "inject",
         "describe",
