@@ -1,11 +1,11 @@
-![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png) 
+![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
 ## RethinkDBAdapter
 [![Build Status](https://travis-ci.org/jmdobry/waterline-rethinkdb.png?branch=master)](https://travis-ci.org/jmdobry/waterline-rethinkdb) [![Code Climate](https://codeclimate.com/github/jmdobry/waterline-rethinkdb.png)](https://codeclimate.com/github/jmdobry/waterline-rethinkdb) [![Dependency Status](https://gemnasium.com/jmdobry/waterline-rethinkdb.png)](https://gemnasium.com/jmdobry/waterline-rethinkdb)
 
 __A RethinkDB adapter for the [Waterline ORM](https://github.com/balderdashy/waterline). Works in a [Sails.js](https://github.com/balderdashy/sails) app or anything using Waterline for the ORM.__
 
-__Version:__ 0.4.1
+__Version:__ 0.5.0
 
 This is pre-1.0.0 alpha software! Many RethinkDB/Waterline features/operations are not supported yet.
 
@@ -25,6 +25,8 @@ Supported operations:
 - run
 
 Waterline criteria options (lessThan, greaterThan, etc.) don't work yet.
+
+See [example/app.js](https://github.com/jmdobry/angular-cache/blob/master/example/app.js) for an example of basic usage.
 
 ## License
 [MIT License](https://github.com/jmdobry/angular-cache/blob/master/LICENSE)

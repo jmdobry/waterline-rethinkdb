@@ -1,7 +1,7 @@
 {
 	"name": "waterline-rethinkdb",
 	"description": "A RethinkDB adapter for the Waterline ORM. Works in a Sails.js app or in anything using Waterline for the ORM.",
-	"version": "0.4.1",
+	"version": "0.5.0",
 	"homepage": "https://github.com/jmdobry/waterline-rethinkdb",
 	"repository": {
 		"type": "git",
