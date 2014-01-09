@@ -1,3 +1,5 @@
+__I am no longer working on this project, feel free to pick it up. If you're still interested in an ORM for RethinkDB, check out [reheat](http://reheat.codetrain.io)__
+
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
 ## RethinkDBAdapter
